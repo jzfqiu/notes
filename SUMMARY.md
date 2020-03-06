@@ -1,6 +1,6 @@
 # Table of contents
 
-* [notes](README.md)
+* [Greetings](README.md)
 * [Algorithms](algorithms/README.md)
   * [\[A01\] Heap](algorithms/a01-heap.md)
 * [Development](development/README.md)
