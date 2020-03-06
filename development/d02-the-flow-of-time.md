@@ -1,4 +1,4 @@
-# \[D02\] the flow of time
+# \[D02\] The Flow of Time: ES6 Event Loop
 
 ## The Flow of Time: ES6 Event Loop and Asynchronous Operations
 
