@@ -5,8 +5,6 @@ According to MDN, there 2 kinds of data types in JS:
 * Primitive data types \(Boolean, Null, Undefined, Number, BigInt, String, Symbol\)
 * Object
 
-Object is clearly the superior one, so we will talk about that first
-
 ## 1. The Global Objects
 
 [MDN](https://developer.mozilla.org/en-US/docs/Glossary/Global_object):
