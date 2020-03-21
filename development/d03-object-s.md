@@ -1,4 +1,4 @@
-# \[D03\] Object\(s\)
+# \[D03\] ES6 Object\(s\)
 
 According to MDN, there 2 kinds of data types in JS:
 
