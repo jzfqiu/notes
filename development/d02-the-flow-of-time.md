@@ -1,10 +1,8 @@
-# \[D02\] The Flow of Time: ES6 Event Loop
+# \[D02\] ES6 Event Loop
 
-## The Flow of Time: ES6 Event Loop and Asynchronous Operations
+## 1. The Event Loop
 
-### 1. The Event Loop
-
-#### 1.1. The Conceptual Model
+### 1.1. The Conceptual Model
 
 ![Conceptual Model](https://mdn.mozillademos.org/files/17124/The_Javascript_Runtime_Environment_Example.svg)
 
@@ -12,7 +10,7 @@ For the most part, running a JS script is like running any other applications. T
 
 Like most executables, JS uses stack frame for function calls and local variables declared inside function scope, although with some special twists including closure and hoisting. Heap is the unorganized memory region that persist during runtime. It is also where objects are allocated.
 
-#### 1.2. Message Processing
+### 1.2. Message Processing
 
 A special component in JS's execution model is the message queue, sometimes also known as "task queue" or "callback queue". A message is typically an event with with an associated function that processes the message. During the event loop, the runtime continuously dequeues a message, load the message into its associated function and push it onto the stack, execute the function until it returns, and dequeues another message.
 
@@ -20,7 +18,7 @@ Since JS is **single-threaded**, messages are **"Run-to-Completion"**, meaning o
 
 For example, a cross-origin `iframe` element maintains a separate stack, heap and message queue from the host page. The element communicate with the page via `postMessage` method, which pushes a message into another runtime's message queue.
 
-#### 1.3. Word Choice: Synchronicity and Blocking
+### 1.3. Word Choice: Synchronicity and Blocking
 
 JS developers often talks about **Synchronous** and **Asynchronous** execution.
 
@@ -34,7 +32,7 @@ When MDN talks about JS as "non-blocking", it means that events considered to be
 
 In a word, these terminologies have no strict definition and should be interpreted in context.
 
-#### 1.4. Example: `setTimeout()`
+### 1.4. Example: `setTimeout()`
 
 The `setTimeout(function, delay)` pushes `function` into the message queue after `delay` milliseconds. Since messages in the queue are processed one by one, the function is not guaranteed to execute after `delay` ms.
 
@@ -60,9 +58,9 @@ The `setTimeout(function, delay)` pushes `function` into the message queue after
 * In the third line, `setTimeout(...console.log(3)...)` enqueues `console.log(2)` into the queue immediately. However, it is not executed since `function` has not return yet.
 * Finally, `console.log(4)` is executed. The function returns and start processing the next message in the queue, which is `console.log(3)`
 
-### 2. Out of the Loop
+## 2. Out of the Loop
 
-#### 2.1. Task vs. Microtask
+### 2.1. Task vs. Microtask
 
 Outside the synchronous part of the event loop, a "microtask" queue handles the async operations. This **job queue** \(queues "microtask"\), together with message queue \(queues messages or "tasks"\) and stack, determines the order of execution of JS codes.
 
@@ -74,7 +72,7 @@ At any given time, the event loop is either executing code on the stack or deque
 
 Note that stack still gets highest priority: nothing else can run before stack gets emptied.
 
-#### 2.2. Example of Task/Microtask Ordering
+### 2.2. Example of Task/Microtask Ordering
 
 Credit to [Jack Archibald and his awesome diagrams](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/).
 
@@ -126,7 +124,7 @@ Note that:
 2. `observe()` observes a change in object asynchronously, which means that it queues a microtask instead of a task. It is also [obsolete](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe) and should not be used elsewhere.
 3. For some odd reasons, the "mutation observer" will only queue one microtask per time. In this case, if a `MutationObserver()` microtask is already in queue, microtask for another mutation will be dropped. \([spec](https://dom.spec.whatwg.org/#mutation-observers)\)
 
-Exetuing the script and we get:
+Executing the script and we get:
 
 ```text
 click
