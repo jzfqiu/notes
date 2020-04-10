@@ -2,10 +2,6 @@
 
 * [Greetings](README.md)
 
-## Career
-
-* [中文前端面试题](career/zhong-wen-qian-duan-mian-shi-ti.md)
-
 ## Development
 
 * [\[D03\] ES6 Object\(s\)](development/d03-object-s.md)
@@ -14,4 +10,8 @@
 ## Algorithms <a id="algorithms-1"></a>
 
 * [\[A01\] Heap](algorithms-1/a01-heap.md)
+
+## Career
+
+* [中文前端面试题](career/zhong-wen-qian-duan-mian-shi-ti.md)
 
