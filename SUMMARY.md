@@ -5,7 +5,6 @@
 ## Career
 
 * [中文前端面试题](career/zhong-wen-qian-duan-mian-shi-ti.md)
-* [Resources](career/resources.md)
 
 ## Development
 
