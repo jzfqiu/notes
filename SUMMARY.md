@@ -13,5 +13,5 @@
 
 ## Career
 
-* [中文前端面试题](career/zhong-wen-qian-duan-mian-shi-ti.md)
+* [Front-end Notes](career/zhong-wen-qian-duan-mian-shi-ti.md)
 
