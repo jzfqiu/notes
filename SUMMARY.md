@@ -4,6 +4,7 @@
 
 ## Development
 
+* [\[D05\] ES6 Scopes](development/d05-es6-scopes.md)
 * [\[D04\] ES6 This](development/d04-es6-this.md)
 * [\[D03\] ES6 Object\(s\)](development/d03-object-s.md)
 * [\[D02\] ES6 Event Loop](development/d02-the-flow-of-time.md)
@@ -15,5 +16,4 @@
 ## Career
 
 * [Front-end Notes](career/zhong-wen-qian-duan-mian-shi-ti.md)
-* [\[D05\] ES6 Scopes](d05-es6-scopes.md)
 

@@ -39,7 +39,11 @@ strictFoo(); // undefined
 window.strictFoo(); // Window
 ```
 
-This is similar to  object method 
+This is similar to `this` under object method.
+
+### 2.1. As Object Method
+
+
 
 
 
