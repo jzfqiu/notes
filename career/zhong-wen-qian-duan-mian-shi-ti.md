@@ -1,5 +1,11 @@
 # Front-end Notes
 
+## 学习资源
+
+TODO
+
+## 问题分类
+
 ### 算法
 
 * 统计文章中出现次数最多的单词
@@ -13,17 +19,18 @@
 
 ### 架构
 
-#### 网络
+#### 网络/浏览器
 
 * 域名解析方式
   * [https://www.jianshu.com/p/7ff02b89d909](https://www.jianshu.com/p/7ff02b89d909)
   * A记录（对应IP），MX记录（mail excahnge，指向mail server），CNAME记录（Canonical Name，别名解析）
-* 强缓存和协商缓存的区别
+* **缓存**：强缓存和协商缓存的区别
   * [https://github.com/amandakelake/blog/issues/41](https://github.com/amandakelake/blog/issues/41)
 * UDP和TCP是什么？ 它们的区别
   * [https://www.geeksforgeeks.org/differences-between-tcp-and-udp/](https://www.geeksforgeeks.org/differences-between-tcp-and-udp/)
 * UDP在什么场景会用到？
-  * 直播吧
+  * 视频流量，streaming
+  * Protocols: DCHP, DNS
 * tcp三次握手四次挥手
   * [https://zhuanlan.zhihu.com/p/53374516](https://zhuanlan.zhihu.com/p/53374516)
 * tcp如何保证有效传输及拥塞控制原理

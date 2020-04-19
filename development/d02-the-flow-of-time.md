@@ -138,7 +138,7 @@ timeout
 
 The `click` happened twice before any microtask or task run because `inner.click()` returns only after the bubble-up process is completed. It calls the `onClick()` function twice \(once on `inner` and once on `outer`\), prints two `click`s, throws 2 promises and 1 mutation observer into the job queue, put two `setTimeout()` callback into the message queue, then returns. Only then does the event loop check to see if there is anything in the queues.
 
-### 3. Source
+## 3. References
 
 * [MDN: Concurrency model and the event loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)  
 * [MDN: Microtasks and the JavaScript runtime environment](https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth)
