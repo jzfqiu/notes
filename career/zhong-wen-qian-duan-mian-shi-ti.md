@@ -138,12 +138,13 @@
   * Object and primitives \(number, string, boolean, undefined, null\)
 * JavaScript原型，原型链 ? 有什么特点？
   * 
-* JavaScript有几种类型的值？（堆：原始数据类型和 栈：引用数据类型），你能画一下他们的内存图吗？
+* JavaScript有几种类型的值？你能画一下他们的内存图吗？
+  * 堆（heap）：原始数据类型
+  * 栈（call stack）：引用数据类型
 * Javascript如何实现继承？
 * Javascript创建对象的几种方式？
 * Javascript作用链域?
 * 谈谈This对象的理解。
-* eval是做什么的？
 * 什么是window对象? 什么是document对象?
 * null，undefined的区别？
 * 写一个通用的事件侦听器函数\(机试题\)。
@@ -160,6 +161,8 @@
 * Ajax 是什么? 如何创建一个Ajax？
 * 同步和异步的区别?
 * 如何解决跨域问题?
+  * CORS \(Cross-origin resource sharing\): **CORS** \(Cross-Origin Resource Sharing\) is a system, consisting of transmitting [HTTP headers](https://developer.mozilla.org/en-US/docs/Glossary/Header), that determines whether browsers block frontend JavaScript code from accessing responses for cross-origin requests.
+  * Preflight: When performing certain types of cross-domain Ajax requests, modern browsers that support CORS will insert an extra "preflight" request to determine whether they have permission to perform the action.
 * 页面编码和被请求的资源编码如果不一致如何处理？
 * 模块化开发怎么做？
 * AMD（Modules/Asynchronous-Definition）、CMD（Common Module Definition）规范区别？
@@ -169,7 +172,15 @@
 * ECMAScript6 怎么写class么，为什么会出现class这种东西?
 * 异步加载的方式有哪些？
 * document.write和 innerHTML的区别?
+  * `document.write` in [deferred](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-defer) or [asynchronous](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-async) scripts will be ignored
+  * In general, user `innerHTML`
 * DOM操作——怎样添加、移除、移动、复制、创建和查找节点?
+  * 添加：`parent.appendChile(child)`
+  * 移除：`element.remove()`
+  * 移动：
+  * 复制：
+  * 创建：`document.createElement`
+  * 查找：`document.getElementById()`
 * .call\(\) 和 .apply\(\) 的含义和区别？
 * 数组和对象有哪些原生方法，列举一下？
 * JS 怎么实现一个类。怎么实例化这个类
@@ -182,16 +193,9 @@
 * 把 Script 标签 放在页面的最底部的body封闭之前 和封闭之后有什么区别？浏览器会如何解析它们？
 * 移动端的点击事件的有延迟，时间是多久，为什么会有？ 怎么解决这个延时？（click 有 300ms 延迟,为了实现safari的双击事件的设计，浏览器要知道你是不是要双击操作。）
 * 知道各种JS框架\(Angular, Backbone, Ember, React, Meteor, Knockout…\)么? 能讲出他们各自的优点和缺点么?
-* Underscore 对哪些 JS 原生对象进行了扩展以及提供了哪些好用的函数方法？
-* JQuery一个对象可以同时绑定多个事件，这是如何实现的？
 * Node.js的适用场景？
 * 什么是“前端路由”?什么时候适合使用“前端路由”? “前端路由”有哪些优点和缺点?
 * 知道什么是webkit么? 知道怎么用浏览器的各种工具来调试和debug代码么?
-* 如何测试前端代码么? 知道BDD, TDD, Unit Test么? 知道怎么测试你的前端工程么\(mocha, sinon, jasmin, qUnit..\)?
-* 前端templating\(Mustache, underscore, handlebars\)是干嘛的, 怎么用?
-* 简述一下 Handlebars 的基本用法？
-* 简述一下 Handlerbars 的对模板的基本处理流程， 如何编译的？如何缓存的？
-* 用js实现千位分隔符?\(来源：[前端农民工](http://div.io/topic/744)，提示：正则+replace\)
 * 检测浏览器版本版本有哪些方式？
 * 我们给一个dom同时绑定两个点击事件，一个用捕获，一个用冒泡，你来说下会执行几次事件，然后会先执行冒泡还是捕获
 
@@ -216,13 +220,33 @@
 * css透明度
 * 介绍一下标准的CSS的盒子模型？与低版本IE的盒子模型有什么不同的？
 * CSS选择符有哪些？哪些属性可以继承？
+  * Selector Combinators: decedent \(space\), children \(&gt;\), siblings \(+, ~\)
+  * 可继承：color...
+  * 不可继承：border, margin...
 * CSS优先级算法如何计算？
+  * 4 level selector:
+    * 
 * CSS3新增伪类有那些？
+  * [https://www.cnblogs.com/sklthegoodman/p/css3.html](https://www.cnblogs.com/sklthegoodman/p/css3.html)
+  * element: nth-child\(3\) {/\* 第n个元素 \*/}
+  * element: only-child {/\* 当父元素只有一个 \*/}
 * 如何居中div？如何居中一个浮动元素？如何让绝对定位的div居中？
+  * `margin: 0 auto;`
 * display有哪些值？说明他们的作用。
+  * inline: cant set top/bottom margin or width/height, no line break 
+  * block: can set margin and width/height, force line break
+  * inline-block: can set margin, no line break
+  * flex
+  * none
 * position的值relative和absolute定位原点是？
+  * relative: where the element should be
+  * absolute: the anscetor
+  * static
+  * sticky
 * CSS3有哪些新特性？
+  * new selectors: `E[attribute=”value”]`, `E[attribute^=”value”]`
 * 请解释一下CSS3的Flexbox（弹性盒布局模型）,以及适用场景？
+  * 
 * 用纯CSS创建一个三角形的原理是什么？
 * 一个满屏 品 字布局 如何设计?
 * 常见兼容性问题？
@@ -233,7 +257,6 @@
 * CSS里的visibility属性有个collapse属性值是干嘛用的？在不同浏览器下以后什么区别？
 * position跟display、margin collapse、overflow、float这些特性相互叠加后会怎么样？
 * 对BFC规范\(块级格式化上下文：block formatting context\)的理解？
-* CSS权重优先级是如何计算的？
 * 请解释一下为什么会出现浮动和什么时候需要清除浮动？清除浮动的方式
 * 移动端的布局用过媒体查询吗？
 * 使用 CSS 预处理器吗？喜欢那个？
@@ -241,7 +264,7 @@
 * 浏览器是怎样解析CSS选择器的？
 * 在网页中的应该使用奇数还是偶数的字体？为什么呢？
 * margin和padding分别适合什么场景使用？
-* 抽离样式模块怎么写，说出思路，有无实践经验？\[阿里航旅的面试题\]
+* 抽离样式模块怎么写，说出思路，有无实践经验？
 * 元素竖向的百分比设定是相对于容器的高度吗？
 * 全屏滚动的原理是什么？用到了CSS的那些属性？
 * 什么是响应式设计？响应式设计的基本原理是什么？如何兼容低版本的IE？

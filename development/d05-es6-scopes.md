@@ -68,5 +68,7 @@ Attempting to change a `const` defined variable will result in `TypeError`
 
 ### 
 
+## Function Scope
+
 
 
