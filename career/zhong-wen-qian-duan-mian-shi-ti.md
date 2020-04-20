@@ -6,6 +6,7 @@
 
 * [https://github.com/amandakelake/blog](https://github.com/amandakelake/blog)
 * [https://markyun.github.io/2015/Front-end-Developer-Questions/](https://markyun.github.io/2015/Front-end-Developer-Questions/)
+* [http://todomvc.com/](http://todomvc.com/)
 
 ### 面试官perspective
 
@@ -224,8 +225,7 @@
   * 可继承：color...
   * 不可继承：border, margin...
 * CSS优先级算法如何计算？
-  * 4 level selector:
-    * 
+  * element &lt; class/attribute selector/pseudo class &lt; id &lt; inline style &lt; `!important`
 * CSS3新增伪类有那些？
   * [https://www.cnblogs.com/sklthegoodman/p/css3.html](https://www.cnblogs.com/sklthegoodman/p/css3.html)
   * element: nth-child\(3\) {/\* 第n个元素 \*/}
@@ -233,14 +233,14 @@
 * 如何居中div？如何居中一个浮动元素？如何让绝对定位的div居中？
   * `margin: 0 auto;`
 * display有哪些值？说明他们的作用。
-  * inline: cant set top/bottom margin or width/height, no line break 
+  * inline: can't set top/bottom margin or width/height, no line break 
   * block: can set margin and width/height, force line break
   * inline-block: can set margin, no line break
   * flex
   * none
 * position的值relative和absolute定位原点是？
   * relative: where the element should be
-  * absolute: the anscetor
+  * absolute: the ancestor
   * static
   * sticky
 * CSS3有哪些新特性？
@@ -270,6 +270,7 @@
 * 什么是响应式设计？响应式设计的基本原理是什么？如何兼容低版本的IE？
 * 视差滚动效果，如何给每页做不同的动画？（回到顶部，向下滑动要再次出现，和只出现一次分别怎么做？）
 * ::before 和 :after中双冒号和单冒号 有什么区别？解释一下这2个伪元素的作用。
+  * pseudo class \(单引号\) vs pseudo element \(双引号\)
 * 如何修改chrome记住密码后自动填充表单的黄色背景 ？
 * 你对line-height是如何理解的？
 * 设置元素浮动后，该元素的display值是多少？（自动变成display:block）
