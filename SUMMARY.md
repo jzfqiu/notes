@@ -4,7 +4,7 @@
 
 ## Development
 
-* [\[D06\] 组件打包器与转译器](development/d06-zu-jian-da-bao-yu-zhuan-yi-qi.md)
+* [\[D06\] 组件打包器与转译器](development/d06-js-bundler-and-transpiler.md)
 * [\[D05\] ES6 Scopes](development/d05-es6-scopes.md)
 * [\[D04\] ES6 This](development/d04-es6-this.md)
 * [\[D03\] ES6 Object\(s\)](development/d03-object-s.md)
