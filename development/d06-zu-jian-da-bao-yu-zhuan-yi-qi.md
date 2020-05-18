@@ -2,7 +2,7 @@
 description: Javascript bundler and tranpiler
 ---
 
-# \[D06\] 组件打包与转译器
+# \[D06\] 组件打包器与转译器
 
 ## 前端环境的特点与挑战
 
@@ -236,5 +236,7 @@ import "./more-helpers"; // more-helpers is also 40kb in size
 
 ## 转译器 Transpilers
 
-// TODO
+转译器，又名源到源编译器，主要尝试解决JS版本兼容性的问题，允许开发者可以只编写最新版本的代码，通过转译器编译到旧版本的代码以兼容老的运行环境。
+
+目前最流行的转译器Babel源自一个澳大利亚高中辍学生的个人项目6to5（[来源](https://medium.com/@sebmck/2015-in-review-51ac7035e272)），原本的功能是转译ES6到ES5。历经5年发展，陆续加入了对TypeScript、React/JSX和ECMA新提案（ES7+）的支持。同时也有一批维护者加入，不断更新，编写新的plugin。
 
