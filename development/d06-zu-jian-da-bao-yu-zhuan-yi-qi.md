@@ -41,7 +41,7 @@ JS代码运行的环境相比其他语言复杂很多。从软件上来看，今
 
 由于Node和浏览器加载模块的语法不同，调用加载函数时需通过查看函数的属性判定调用的环境。
 
-除此之外，支持不同内核/平台的浏览器也是一个重点问题。根据维基的统计（\[来源\]\([https://en.wikipedia.org/wiki/Usage\_share\_of\_web\_browsers\#StatCounter\_\(Jan\_2009\_to\_October\_2019\)\)）截止到2019年，全世界范围内：](https://en.wikipedia.org/wiki/Usage_share_of_web_browsers#StatCounter_%28Jan_2009_to_October_2019%29%29）截止到2019年，全世界范围内：)
+除此之外，支持不同内核/平台的浏览器也是一个重点问题。根据维基的统计（[来源](https://en.wikipedia.org/wiki/Usage_share_of_web_browsers#StatCounter_%28Jan_2009_to_October_2019%29)）截止到2019年，全世界范围内：
 
 * 54%的流量来自移动端用户；
 * 约25%的浏览器不使用Chrome内核；
